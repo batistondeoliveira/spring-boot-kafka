@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.elielbatiston.shopapi.dto.ShopDTO;
+import com.elielbatiston.shopapi.events.KafkaClient;
 import com.elielbatiston.shopapi.model.Shop;
 import com.elielbatiston.shopapi.model.ShopItem;
 import com.elielbatiston.shopapi.repository.ShopRepository;
@@ -24,6 +25,7 @@ import lombok.RequiredArgsConstructor;
 public class ShopController {
 	
 	private final ShopRepository shopRepository;
+	private final KafkaClient kafkaClient;
 	
 	@GetMapping
 	public List<ShopDTO> getShop() {
@@ -43,6 +45,9 @@ public class ShopController {
 			shopItem.setShop(shop);
 		}
 		
-		return ShopDTO.convert(shopRepository.save(shop));
+		shopDTO = ShopDTO.convert(shopRepository.save(shop));
+		kafkaClient.sendMessage(shopDTO);
+		
+		return shopDTO; 
 	}
 }
