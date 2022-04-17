@@ -13,6 +13,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.elielbatiston.shopapi.dto.ShopDTO;
+
 import lombok.Getter;
 import lombok.Setter;
 

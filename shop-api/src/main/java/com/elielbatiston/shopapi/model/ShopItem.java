@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.elielbatiston.shopapi.dto.ShopItemDTO;
+
 import lombok.Getter;
 import lombok.Setter;
 
