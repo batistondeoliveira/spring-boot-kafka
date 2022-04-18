@@ -1,4 +1,4 @@
-package com.elielbatiston.shopapi.model;
+package com.elielbatiston.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import com.elielbatiston.shopapi.dto.ShopItemDTO;
+import com.elielbatiston.dto.ShopItemDTO;
 
 import lombok.Getter;
 import lombok.Setter;

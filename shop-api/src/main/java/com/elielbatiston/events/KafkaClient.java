@@ -1,9 +1,9 @@
-package com.elielbatiston.shopapi.events;
+package com.elielbatiston.events;
 
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import com.elielbatiston.shopapi.dto.ShopDTO;
+import com.elielbatiston.dto.ShopDTO;
 
 import lombok.RequiredArgsConstructor;
 

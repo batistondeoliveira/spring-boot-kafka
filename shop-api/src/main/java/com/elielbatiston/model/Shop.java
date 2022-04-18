@@ -1,4 +1,4 @@
-package com.elielbatiston.shopapi.model;
+package com.elielbatiston.model;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -13,7 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import com.elielbatiston.shopapi.dto.ShopDTO;
+import com.elielbatiston.dto.ShopDTO;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,11 +1,11 @@
-package com.elielbatiston.shopapi.dto;
+package com.elielbatiston.dto;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.elielbatiston.shopapi.model.Shop;
+import com.elielbatiston.model.Shop;
 
 import lombok.Getter;
 import lombok.Setter;

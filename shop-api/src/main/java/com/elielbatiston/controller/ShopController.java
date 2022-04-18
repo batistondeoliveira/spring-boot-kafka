@@ -1,4 +1,4 @@
-package com.elielbatiston.shopapi.controller;
+package com.elielbatiston.controller;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.elielbatiston.shopapi.dto.ShopDTO;
-import com.elielbatiston.shopapi.events.KafkaClient;
-import com.elielbatiston.shopapi.model.Shop;
-import com.elielbatiston.shopapi.model.ShopItem;
-import com.elielbatiston.shopapi.repository.ShopRepository;
+import com.elielbatiston.dto.ShopDTO;
+import com.elielbatiston.events.KafkaClient;
+import com.elielbatiston.model.Shop;
+import com.elielbatiston.model.ShopItem;
+import com.elielbatiston.repository.ShopRepository;
 
 import lombok.RequiredArgsConstructor;
 

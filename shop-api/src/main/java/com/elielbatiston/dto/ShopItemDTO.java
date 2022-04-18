@@ -1,6 +1,6 @@
-package com.elielbatiston.shopapi.dto;
+package com.elielbatiston.dto;
 
-import com.elielbatiston.shopapi.model.ShopItem;
+import com.elielbatiston.model.ShopItem;
 
 import lombok.Getter;
 import lombok.Setter;
