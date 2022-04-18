@@ -1,6 +1,6 @@
 package com.elielbatiston.shopvalidator.dto;
 
-import java.time.LocalTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +12,7 @@ import lombok.Setter;
 public class ShopDTO {
 	
 	private String identifier;
-	private LocalTime dateShop;
+	private LocalDate dateShop;
 	private String status;
 	private List<ShopItemDTO> items = new ArrayList<>();
 }
