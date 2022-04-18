@@ -1,4 +1,4 @@
-package com.elielbatiston.shopvalidator.dto;
+package com.elielbatiston.dto;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

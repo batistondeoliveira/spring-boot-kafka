@@ -1,13 +1,13 @@
-package com.elielbatiston.shopvalidator.events;
+package com.elielbatiston.events;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import com.elielbatiston.shopvalidator.dto.ShopDTO;
-import com.elielbatiston.shopvalidator.dto.ShopItemDTO;
-import com.elielbatiston.shopvalidator.model.Product;
-import com.elielbatiston.shopvalidator.repository.ProductRepository;
+import com.elielbatiston.dto.ShopDTO;
+import com.elielbatiston.dto.ShopItemDTO;
+import com.elielbatiston.model.Product;
+import com.elielbatiston.repository.ProductRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

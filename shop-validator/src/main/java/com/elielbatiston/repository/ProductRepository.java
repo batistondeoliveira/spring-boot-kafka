@@ -1,8 +1,8 @@
-package com.elielbatiston.shopvalidator.repository;
+package com.elielbatiston.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.elielbatiston.shopvalidator.model.Product;
+import com.elielbatiston.model.Product;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
 	

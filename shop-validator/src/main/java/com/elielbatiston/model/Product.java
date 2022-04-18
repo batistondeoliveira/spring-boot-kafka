@@ -1,4 +1,4 @@
-package com.elielbatiston.shopvalidator.model;
+package com.elielbatiston.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
