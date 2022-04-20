@@ -30,8 +30,13 @@ public class ReceiveKafkaMessage {
 				throw new Exception();
 			}
 		} catch (Exception e) {
-			log.error("Erro no processamento da mensagem", e);
+			log.error("Erro no processamento da mensagem", e);			
 			kafkaTemplate.send(SHOP_TOPIC_RETRY, shopDTO);
 		}
+	}
+	
+	@KafkaListener(topics = SHOP_TOPIC_RETRY, groupId = "group_report")
+	public void listenShopTopicRetry(ShopDTO shopDTO) throws Exception {		
+		log.info("Retentativa de processamento: {}.", shopDTO.getIdentifier());						
 	}
 }
