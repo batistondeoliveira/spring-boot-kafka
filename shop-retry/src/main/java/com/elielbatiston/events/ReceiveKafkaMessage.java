@@ -1,6 +1,7 @@
 package com.elielbatiston.events;
 
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import com.elielbatiston.dto.ShopDTO;
@@ -13,7 +14,11 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 public class ReceiveKafkaMessage {
 
-	private static final String SHOP_TOPIC = "SHOP_TOPIC";	
+	private final KafkaTemplate<String, ShopDTO> kafkaTemplate;
+	
+	private static final String SHOP_TOPIC = "SHOP_TOPIC";
+	
+	private static final String SHOP_TOPIC_RETRY = "SHOP_TOPIC_RETRY";
 		
 	@KafkaListener(topics = SHOP_TOPIC, groupId = "group_report")
 	public void listenShopTopic(ShopDTO shopDTO) {
@@ -26,6 +31,7 @@ public class ReceiveKafkaMessage {
 			}
 		} catch (Exception e) {
 			log.error("Erro no processamento da mensagem", e);
+			kafkaTemplate.send(SHOP_TOPIC_RETRY, shopDTO);
 		}
 	}
 }
