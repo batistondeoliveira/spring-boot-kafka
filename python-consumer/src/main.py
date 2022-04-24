@@ -1,4 +1,4 @@
-from flask import flask
+from flask import Flask
 from consumer import Consumer
 import json
 import logging
