@@ -14,7 +14,8 @@ class Consumer(threading.Thread):
             consumer = KafkaConsumer(                
                 bootstrap_servers=['kafka:9092'],
                 group_id="grupo_python",                         
-                consumer_timeout_ms=30000                
+                consumer_timeout_ms=30000,
+                api_version=(0,10)                
             )
             consumer.subscribe(['SHOP_TOPIC'])
 
