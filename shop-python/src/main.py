@@ -9,7 +9,7 @@ consumer.start()
 
 app = Flask(__name__)
 
-@app.route('/messages')
+@app.route('/all')
 def get_messages():
     messages = consumer.get_messages()
     return json.dumps(messages)

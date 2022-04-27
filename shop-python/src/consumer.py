@@ -12,12 +12,11 @@ class Consumer(threading.Thread):
     def run(self):
         try:
             consumer = KafkaConsumer(                
-                bootstrap_servers=['localhost:9092'],
+                bootstrap_servers=['kafka:9092'],
                 group_id="grupo_python",                         
-                consumer_timeout_ms=30000,
-                api_version=(0,10)
+                consumer_timeout_ms=30000                
             )
-            consumer.subscribe(['SHOP_TOPIC_EVENT'])
+            consumer.subscribe(['SHOP_TOPIC'])
 
             while not self.stop_event.is_set():
                 for message in consumer:
